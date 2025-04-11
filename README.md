@@ -1,104 +1,114 @@
-# Gamify - Valorant Game Analysis Tool
+# Valorant Gameplay Analyzer
 
-![Valorant](https://playvalorant.com/static/social-share-image.jpg)
+A computer vision-based tool for analyzing Valorant gameplay videos, focusing on kill feed detection and weapon tracking using YOLO models.
 
-A powerful tool for analyzing Valorant gameplay videos, providing detailed statistics, kill feeds, weapon tracking, and highlight generation.
+## Core Features
 
-## 🚀 Features
+### Kill Feed Analysis
+- Detects and parses kill events from gameplay footage
+- Tracks killer, victim, weapon used, and special events (headshots, wallbangs)
+- Generates detailed scoreboard statistics
+- Supports team color detection and character identification
 
-- **Video Analysis**: Upload and analyze Valorant gameplay videos
-- **Kill Feed Detection**: Automatically detect and track kill events
-- **Weapon Tracking**: Analyze weapon usage and statistics
-- **Highlight Generation**: Generate highlights based on specific agent performance
-- **Scoreboard Generation**: Create detailed scoreboards from gameplay
-- **Modern UI**: Built with Next.js and Tailwind CSS for a beautiful user experience
+### Weapon Tracking
+- Tracks weapon usage throughout the game
+- Identifies 19 different weapons including:
+  - Primary weapons (Vandal, Phantom, Operator, etc.)
+  - Secondary weapons (Classic, Shorty, Sheriff, etc.)
+  - Melee weapons
+- Generates weapon usage statistics and patterns
 
-## 🏗️ Project Structure
+## Technical Implementation
+
+### Backend (Python)
+- **Computer Vision**: OpenCV for video processing
+- **Object Detection**: YOLO models for:
+  - Kill feed detection
+  - Weapon identification
+  - Character recognition
+- **Data Processing**: 
+  - Kill event parsing
+  - Weapon tracking
+  - Scoreboard generation
+- **API**: Flask server for video upload and analysis
+
+### Frontend (Next.js)
+- Video upload interface
+- Results visualization
+- Real-time processing status
+
+## Project Structure
 
 ```
-├── client/                 # Next.js frontend application
-│   ├── app/               # Next.js app directory
-│   ├── lib/               # Utility functions and components
-│   ├── public/            # Static assets
-│   └── ...                # Configuration files
+├── server/
+│   ├── models/            # YOLO model files
+│   ├── killlfeed.py      # Kill feed detection and parsing
+│   ├── weapon_tracker.py # Weapon usage tracking
+│   ├── color_detection.py # Team color detection
+│   ├── constants.py      # Game constants and mappings
+│   └── app.py           # Flask API server
 │
-└── server/                # Python Flask backend
-    ├── models/            # ML models and related code
-    ├── app.py            # Main Flask application
-    ├── killlfeed.py      # Kill feed detection logic
-    ├── weapon_tracker.py # Weapon tracking functionality
-    └── ...               # Other utility modules
+└── client/
+    ├── app/             # Next.js application
+    ├── lib/             # Utility functions
+    └── public/          # Static assets
 ```
 
-## 🛠️ Tech Stack
+## Setup
 
-### Frontend
-- Next.js 15
-- React 19
-- TypeScript
-- Tailwind CSS
-- Radix UI Components
-- React Player
-
-### Backend
-- Python Flask
-- Computer Vision
-- Machine Learning Models
-- CORS Support
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- Python 3.8+
-- FFmpeg (for video processing)
-
-### Installation
-
-1. **Clone the repository**
+1. **Install Dependencies**
    ```bash
-   git clone [your-repo-url]
-   cd Gamify
-   ```
-
-2. **Setup Frontend**
-   ```bash
+   # Backend
+   cd server
+   pip install -r requirements.txt
+   
+   # Frontend
    cd client
    npm install
+   ```
+
+2. **Configure Models**
+   - Place YOLO model files in `server/models/`
+   - Ensure correct model paths in `config.py`
+
+3. **Start Servers**
+   ```bash
+   # Backend
+   python app.py
+   
+   # Frontend
    npm run dev
    ```
 
-3. **Setup Backend**
-   ```bash
-   cd server
-   pip install -r requirements.txt
-   python app.py
-   ```
+## Usage
 
-4. **Environment Setup**
-   - Create a `.env` file in the server directory with necessary configurations
-   - Ensure all required ML models are in the correct directory
+1. Upload a Valorant gameplay video through the web interface
+2. The system will:
+   - Process the video frame by frame
+   - Detect and parse kill events
+   - Track weapon usage
+   - Generate statistics
+3. View the analysis results including:
+   - Kill feed events
+   - Weapon usage patterns
+   - Player statistics
 
-## 📝 Usage
+## Requirements
 
-1. Start both the frontend and backend servers
-2. Navigate to `http://localhost:3000` in your browser
-3. Upload a Valorant gameplay video
-4. Wait for the analysis to complete
-5. View the generated statistics, kill feed, and highlights
+- Python 3.8+
+- Node.js 18+
+- FFmpeg
+- CUDA-capable GPU (recommended for faster processing)
+- YOLO model files for:
+  - Kill feed detection
+  - Weapon identification
+  - Character recognition
 
-## 🤝 Contributing
+## Development
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Valorant API
-- OpenCV
-- TensorFlow
-- Flask
-- Next.js
+The project uses:
+- YOLOv8 for object detection
+- OpenCV for video processing
+- Flask for API server
+- Next.js for frontend
+- TypeScript for type safety
