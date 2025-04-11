@@ -1,0 +1,10 @@
+venv
+frames_output
+__pycache__
+uploads
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.csv

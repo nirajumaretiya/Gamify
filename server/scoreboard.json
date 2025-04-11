@@ -1,0 +1,112 @@
+{
+    "green_KAYO": {
+        "kills": 4,
+        "deaths": 0,
+        "assists": 0,
+        "headshots": 0,
+        "wallbangs": 0,
+        "team_color": "green",
+        "weapon_used": "Operator",
+        "kill_death_ratio": 4.0
+    },
+    "red_Reyna": {
+        "kills": 0,
+        "deaths": 1,
+        "assists": 0,
+        "headshots": 0,
+        "wallbangs": 0,
+        "team_color": "red",
+        "weapon_used": null,
+        "kill_death_ratio": 0.0
+    },
+    "red_Phoenix": {
+        "kills": 2,
+        "deaths": 1,
+        "assists": 0,
+        "headshots": 0,
+        "wallbangs": 0,
+        "team_color": "red",
+        "weapon_used": "Vandal",
+        "kill_death_ratio": 1.0
+    },
+    "green_Cypher": {
+        "kills": 0,
+        "deaths": 3,
+        "assists": 0,
+        "headshots": 0,
+        "wallbangs": 0,
+        "team_color": "green",
+        "weapon_used": null,
+        "kill_death_ratio": 0.0
+    },
+    "red_Clove": {
+        "kills": 0,
+        "deaths": 3,
+        "assists": 0,
+        "headshots": 0,
+        "wallbangs": 0,
+        "team_color": "red",
+        "weapon_used": null,
+        "kill_death_ratio": 0.0
+    },
+    "red_Viper": {
+        "kills": 1,
+        "deaths": 0,
+        "assists": 0,
+        "headshots": 0,
+        "wallbangs": 0,
+        "team_color": "red",
+        "weapon_used": "Phantom",
+        "kill_death_ratio": 1.0
+    },
+    "green_Viper": {
+        "kills": 1,
+        "deaths": 0,
+        "assists": 0,
+        "headshots": 0,
+        "wallbangs": 0,
+        "team_color": "green",
+        "weapon_used": "Vandal",
+        "kill_death_ratio": 1.0
+    },
+    "red_Sage": {
+        "kills": 2,
+        "deaths": 1,
+        "assists": 0,
+        "headshots": 0,
+        "wallbangs": 0,
+        "team_color": "red",
+        "weapon_used": "Unknown",
+        "kill_death_ratio": 1.0
+    },
+    "green_Clove": {
+        "kills": 0,
+        "deaths": 1,
+        "assists": 0,
+        "headshots": 0,
+        "wallbangs": 0,
+        "team_color": "green",
+        "weapon_used": null,
+        "kill_death_ratio": 0.0
+    },
+    "red_Jett": {
+        "kills": 0,
+        "deaths": 1,
+        "assists": 0,
+        "headshots": 0,
+        "wallbangs": 0,
+        "team_color": "red",
+        "weapon_used": null,
+        "kill_death_ratio": 0.0
+    },
+    "green_Reyna": {
+        "kills": 1,
+        "deaths": 0,
+        "assists": 0,
+        "headshots": 1,
+        "wallbangs": 0,
+        "team_color": "green",
+        "weapon_used": "Vandal",
+        "kill_death_ratio": 1.0
+    }
+}
