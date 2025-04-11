@@ -5,3 +5,7 @@
 *.svg
 *.csv
 *.env
+models/weight/
+models/weight/**/*
+models/**/*.pt
+models/**/*.pth
