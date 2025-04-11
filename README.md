@@ -1,26 +1,31 @@
-# Valorant Gameplay Analyzer
+# 🎮 Valorant Gameplay Analyzer
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Object%20Detection-orange.svg)](https://github.com/ultralytics/ultralytics)
+[![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-red.svg)](https://opencv.org/)
 
 A computer vision-based tool for analyzing Valorant gameplay videos, focusing on kill feed detection and weapon tracking using YOLO models.
 
-## Core Features
+## ✨ Core Features
 
-### Kill Feed Analysis
-- Detects and parses kill events from gameplay footage
-- Tracks killer, victim, weapon used, and special events (headshots, wallbangs)
-- Generates detailed scoreboard statistics
-- Supports team color detection and character identification
+### 🎯 Kill Feed Analysis
+- 🔍 Detects and parses kill events from gameplay footage
+- 👥 Tracks killer, victim, weapon used, and special events (headshots, wallbangs)
+- 📊 Generates detailed scoreboard statistics
+- 🎨 Supports team color detection and character identification
 
-### Weapon Tracking
-- Tracks weapon usage throughout the game
-- Identifies 19 different weapons including:
-  - Primary weapons (Vandal, Phantom, Operator, etc.)
-  - Secondary weapons (Classic, Shorty, Sheriff, etc.)
-  - Melee weapons
-- Generates weapon usage statistics and patterns
+### 🔫 Weapon Tracking
+- 📈 Tracks weapon usage throughout the game
+- 🎯 Identifies 19 different weapons including:
+  - 🏹 Primary weapons (Vandal, Phantom, Operator, etc.)
+  - 🔫 Secondary weapons (Classic, Shorty, Sheriff, etc.)
+  - ⚔️ Melee weapons
+- 📊 Generates weapon usage statistics and patterns
 
-## Technical Implementation
+## 🛠️ Technical Implementation
 
-### Backend (Python)
+### 🔧 Backend (Python)
 - **Computer Vision**: OpenCV for video processing
 - **Object Detection**: YOLO models for:
   - Kill feed detection
@@ -32,14 +37,14 @@ A computer vision-based tool for analyzing Valorant gameplay videos, focusing on
   - Scoreboard generation
 - **API**: Flask server for video upload and analysis
 
-### Frontend (Next.js)
+### 🎨 Frontend (Next.js)
 - Video upload interface
 - Results visualization
 - Real-time processing status
 
-## Project Structure
+## 📁 Project Structure
 
-```
+```bash
 ├── server/
 │   ├── models/            # YOLO model files
 │   ├── killlfeed.py      # Kill feed detection and parsing
@@ -54,7 +59,7 @@ A computer vision-based tool for analyzing Valorant gameplay videos, focusing on
     └── public/          # Static assets
 ```
 
-## Setup
+## ⚙️ Setup
 
 1. **Install Dependencies**
    ```bash
@@ -80,7 +85,7 @@ A computer vision-based tool for analyzing Valorant gameplay videos, focusing on
    npm run dev
    ```
 
-## Usage
+## 📝 Usage
 
 1. Upload a Valorant gameplay video through the web interface
 2. The system will:
@@ -93,7 +98,7 @@ A computer vision-based tool for analyzing Valorant gameplay videos, focusing on
    - Weapon usage patterns
    - Player statistics
 
-## Requirements
+## 📋 Requirements
 
 - Python 3.8+
 - Node.js 18+
@@ -104,7 +109,7 @@ A computer vision-based tool for analyzing Valorant gameplay videos, focusing on
   - Weapon identification
   - Character recognition
 
-## Development
+## 💻 Development
 
 The project uses:
 - YOLOv8 for object detection
